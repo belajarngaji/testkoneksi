@@ -7,12 +7,12 @@ const SUPABASE_KEY = 'sb_publishable_r0gMojctdN1aftj_PVuhAQ_R0s__keH';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-// Coba fetch dari tabel `materials`
+// Coba fetch dari tabel `materi`
 async function testConnection() {
   const output = document.getElementById('output');
 
   const { data, error } = await supabase
-    .from('materials')
+    .from('materi')
     .select('*')
     .limit(1);
 
